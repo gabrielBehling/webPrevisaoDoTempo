@@ -8,6 +8,7 @@ function handleKeyDown(){
 }
 
 async function getData() {
+    if (searchBar.value == ''){ return }
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchBar.value}&appid=${apiKey}&units=metric&lang=pt_br`
 
     try {
